@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #FAFAF9;
+    color: #1C1917;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: 'Newsreader', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Soft diffuse scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D6D3D1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A29E;
+}
+
+/* Custom editorial badge and panel utility styles */
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(231, 229, 228, 0.7);
+  box-shadow: 0 10px 30px -4px rgba(41, 37, 36, 0.04), 0 2px 8px -2px rgba(41, 37, 36, 0.02);
+  border-radius: 1.5rem;
+}
+
+.editorial-card-subtle {
+  background-color: #F8F8F7;
+  border: 1px solid rgba(231, 229, 228, 0.6);
+  border-radius: 1.25rem;
+}
+
+/* Organic range slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #E7E5E4;
+  border-radius: 9999px;
+  height: 6px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #44403C;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(41, 37, 36, 0.2);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #1C1917;
+}
+
+input[type="range"].slider-terracotta::-webkit-slider-thumb {
+  background: #C86D51;
+}
+input[type="range"].slider-terracotta::-webkit-slider-thumb:hover {
+  background: #B25439;
+}
+
+input[type="range"].slider-sage::-webkit-slider-thumb {
+  background: #5F7A61;
+}
+input[type="range"].slider-sage::-webkit-slider-thumb:hover {
+  background: #4D644F;
+}
